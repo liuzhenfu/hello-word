@@ -23,8 +23,9 @@ void quick_sort(int a[],int l,int r)
 				a[j++] = a[i];
 			}
 		}
+		a[i] = p;
+		quick_sort(a,l,i-1);
+		quick_sort(a,i+1,r);
 	}
-	s[i] = p;
-	quick_sort(a,l,i-1);
-	quick_sort(a,i+1,r);
+	
 }
